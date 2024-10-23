@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSO Auto Submit</title>
+</head>
+<body onload="document.getElementById('sso-form').submit();">
+
+    <h3>Submitting SSO Data...</h3>
+
+    <form id="sso-form" action="/sso-endpoint" method="POST">
+        <!-- SSO hidden fields with authentication data -->
+        <input type="hidden" name="id_token" value="sample_id_token_12345" />
+        <input type="hidden" name="app_version" value="1.0.0" />
+        <input type="hidden" name="email" value="user@example.com" />
+    </form>
+
+</body>
+</html>
